@@ -7,7 +7,7 @@ import ReusableForm from "./ReusableForm";
 function NewKegForm (props){
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewItemCreation({
+    props.onNewKegCreation({
       name: event.target.name.value,
       brand: event.target.brand.value,
       alcoholContent: event.target.alcoholContent.value,
