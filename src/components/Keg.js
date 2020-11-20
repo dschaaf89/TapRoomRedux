@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 
 
 function Keg(props){
-
+let pintsLeft = props.pintsLeft;
+if(parseInt(pintsLeft)=== 0){
+  pintsLeft="Out of Stock"
+}else if (pintsLeft < 10){
+  pintsLeft="Almost Empty"+{pintsLeft};
+}
 
 
 return(
@@ -26,3 +31,5 @@ Keg.propTypes = {
   alcoholContent:PropTypes.number,
   pintsLeft: PropTypes.number
 };
+
+export default Keg;

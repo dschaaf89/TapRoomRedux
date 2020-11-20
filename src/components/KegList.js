@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./Keg";
+import Keg from "./Keg";
 import PropTypes from "prop-types";
 import Row from "react-bootstrap/row";
 import Col from "react-bootstrap/col";
@@ -30,8 +30,8 @@ function KegList(props) {
           <Col xs ={4}>       
             <div className="card" style={cardPadding}> 
               <div className="container">       
-                <Item
-                whenItemClicked={props.onItemSelection}
+                <Keg
+                whenItemClicked={props.onKegSelection}
                 name={keg.name}
                 description={keg.brand}
                 alcoholContent={keg.alcoholContent}
