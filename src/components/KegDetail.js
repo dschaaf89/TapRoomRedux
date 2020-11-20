@@ -40,7 +40,7 @@ function KegDetail(props){
       <p>price: ${keg.price}</p>
       <p><em>Alcohol Content: {keg.alcoholContent}%</em></p>
       <p>Pints Left: {keg.pintsLeft}</p>
-      <Button varient="danger"  onClick={()=>onClickingDelete(keg.id)}>Remove Keg</Button>
+      <Button variant="danger"  onClick={()=>onClickingDelete(keg.id)}>Remove Keg</Button>
       <Button variant="success" onClick={handlePintRemove}>Sell Pint</Button>
       <Button variant="warning" onClick={props.onClickingEdit}>Edit Item</Button>
       <hr/>

@@ -26,7 +26,7 @@ function ReusableForm(props) {
           name='alcoholContent'
           placeholder='00.00%' />
               <br/>
-            <Button variant="danger" type='submit'>{props.buttonText}</Button>
+              <Button variant="primary" type='submit'>{props.buttonText}</Button>
           </form>
         </div>
       {/* </div> */}
