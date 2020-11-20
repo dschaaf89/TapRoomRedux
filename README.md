@@ -34,11 +34,6 @@
         <a href="https://github.com/dschaaf89/Tap-Room/issues">
             <img src="https://img.shields.io/github/issues/dschaaf89/Tap-Room?style=plastic">
         </a>
-        ¨
-        <a href="https://github.com/dschaaf89/Tap-Room/blob/master/LICENSE.txt">
-            <img src="https://img.shields.io/github/license/dschaaf89/Tap-Room?color=orange&style=plastic">
-        </a>
-        ¨
     </p>
 </p>
 <p align="center">
@@ -216,7 +211,7 @@ If you have any feedback or concerns, please contact one of the contributors.
 
 ### ⚖️ License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Copyright (C) 2020 Daniel Schaaf and William Donovan-Seid. All Rights Reserved.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Copyright (C) 2020 Daniel Schaaf All Rights Reserved.
 ```
 MIT License
 
