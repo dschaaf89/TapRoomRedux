@@ -5,6 +5,12 @@ import Button from "react-bootstrap/button";
 
 function KegDetail(props){
 
+  const topStyle = {
+    textAlign: 'center',
+    fontFamily: 'tahoma',
+    color: 'white'
+  }
+
   const cardPadding = {
     
     marginBottom: "30px",
@@ -15,14 +21,12 @@ function KegDetail(props){
     color: "white",    
   }
   
-  const {keg, onClickingDelete} = props;
-
+  const { keg, onClickingDelete } = props;
   let pintsLeft = keg.pintsLeft;
-  if(pintsLeft === 0){
-    pintsLeft= "Out of Stock"
-  }else if (pintsLeft < 10 && pintsLeft > 0){
-    pintsLeft = "Almost Empty"
+  if(parseInt(pintsLeft) === 0) {
+    pintsLeft = 'Out Of Stock';
   }
+
 
   function handlePintRemove(){
     if(keg.pintsLeft > 0 ){
@@ -33,7 +37,7 @@ function KegDetail(props){
   return(
     <React.Fragment>
       <div className = "card"style={cardPadding}>
-        <div className = "container">
+        <div className = "container" style = {topStyle}>
       <h1>Keg Details</h1>
       <h3>Name:{keg.name} </h3>
       <h3>Brand:{keg.brand}</h3>

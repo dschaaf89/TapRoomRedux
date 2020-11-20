@@ -5,6 +5,11 @@ import ReusableForm from "./ReusableForm";
 
 
 function NewKegForm (props){
+  const topStyle = {
+    textAlign: 'center',
+    fontFamily: 'tahoma',
+    color: 'white'
+  }
   const cardPadding = {
     marginBottom: "30px",
     marginLeft: "15px",
@@ -26,7 +31,7 @@ function NewKegForm (props){
   return (
     <React.Fragment>
       <div className = "card" style ={cardPadding}>
-        <div className = "container">
+        <div className = "container"style ={topStyle}>
           <h1>Add a new Keg</h1>
        <ReusableForm 
         formSubmissionHandler = {handleNewKegFormSubmission}
