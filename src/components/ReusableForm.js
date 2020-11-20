@@ -9,33 +9,22 @@ function ReusableForm(props) {
       {/* <div style={formStyle}> */}
         <div className="container">
           <form onSubmit = {props.formSubmissionHandler}>
-            <h3>Keg Name</h3>
-            <input
-              type ="text"
-              name = "name"
-              placeholder = "keg name" 
-              required
-              />
-            <h3>Brand</h3>
-            <textarea 
-              name = "Brand"
-              placeholder = "brand"
-              required
-              />
-            <h3>Alcohol Content</h3>
-            <input
-              type = "number"
-              name = "alcohol content"
-              placeholder = "alcohol content" 
-              required
-              />
-            <h3>Price</h3>
-            <input
-              type = "text"
-              name = "price"
-              placeholder = "price" 
-              required
-              />
+          <input
+          type='text'
+          name='name'
+          placeholder='Keg Name' />
+        <input
+          type='text'
+          name='brand'
+          placeholder='Keg Brand' />
+        <input
+          type='text'
+          name='price'
+          placeholder='$0.00' />
+          <input
+          type='text'
+          name='alcoholContent'
+          placeholder='00.00%' />
               <br/>
             <Button variant="danger" type='submit'>{props.buttonText}</Button>
           </form>

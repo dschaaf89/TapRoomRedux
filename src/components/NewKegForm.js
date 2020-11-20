@@ -10,23 +10,21 @@ function NewKegForm (props){
     props.onNewKegCreation({
       name: event.target.name.value,
       brand: event.target.brand.value,
-      alcoholContent: event.target.alcoholContent.value,
       price: event.target.price.value,
+      alcoholContent: event.target.alcoholContent.value,
+      pintsRemaining: 124,
       id: v4()});
-  }
+    }
   return (
     <React.Fragment>
-        <div className="container"> 
-          <ReusableForm
-            formSubmissionHandler = {handleNewKegFormSubmission}
-            buttonText= "Add Keg" />      
-        </div>
+       <ReusableForm 
+        formSubmissionHandler = {handleNewKegFormSubmission}
+        buttonText= "Add Keg"/>
     </React.Fragment>
   );
 }
-
 NewKegForm.propTypes = {
-  onNewItemCreate: PropTypes.func
-}
+  onNewKegCreation: PropTypes.func
+};
 
 export default NewKegForm;
