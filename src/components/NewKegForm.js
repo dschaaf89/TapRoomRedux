@@ -5,6 +5,14 @@ import ReusableForm from "./ReusableForm";
 
 
 function NewKegForm (props){
+  const cardPadding = {
+    marginBottom: "30px",
+    marginLeft: "15px",
+    marginTop: "15px",
+    marginRight: "15px",
+    backgroundColor: 'rgba(52, 52, 52, .6)',
+    color: "white",    
+  }
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
     props.onNewKegCreation({
@@ -17,9 +25,14 @@ function NewKegForm (props){
     }
   return (
     <React.Fragment>
+      <div className = "card" style ={cardPadding}>
+        <div className = "container">
+          <h1>Add a new Keg</h1>
        <ReusableForm 
         formSubmissionHandler = {handleNewKegFormSubmission}
         buttonText= "Add Keg"/>
+        </div>
+        </div>
     </React.Fragment>
   );
 }
