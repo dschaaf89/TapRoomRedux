@@ -14,7 +14,7 @@ function EditKegForm(props){
       price: event.target.price.value,
       alcoholContent: event.target.alcoholContent.value,
       pintsLeft:124,    
-      id: props.id});
+      id: keg.id});
   }
 
   return (

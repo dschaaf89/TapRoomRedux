@@ -6,6 +6,11 @@ import Row from "react-bootstrap/row";
 import Col from "react-bootstrap/col";
 
 function KegList(props){
+  const topStyle = {
+    textAlign: 'center',
+    fontFamily: 'tahoma',
+    color: 'white'
+  }
   const cardPadding = {
     marginBottom: "30px",
     marginLeft: "15px",
@@ -16,6 +21,7 @@ function KegList(props){
   }
   return(
     <React.Fragment>
+      <h1 style={topStyle}>Kegs On Tap</h1>
       <hr/>
       <Row>
       {props.kegList.map((keg) =>
