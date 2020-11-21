@@ -15,7 +15,7 @@ function Keg(props){
   return (
     <React.Fragment>
       <div onClick={()=>props.whenKegClicked(props.id)}style={topStyle}>
-     
+        <img src = "https://www.brightwatersbeverage.com/uploads/2/2/7/7/22778622/2984715_orig.gif" alt = "" height = "100px" ></img>
         <h3>Name:{props.name}</h3>
         <h5>Brand:{props.brand}</h5>
         <h6>Alcohol Content{props.alcoholContent}</h6>
