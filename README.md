@@ -68,7 +68,7 @@
 
 ### 📖 Description
 
-This react app is built based on the following diagram. Users are able to add new keg records and details which are displayed in a list. List items can be selected which display the keg details where they can be deleted, or pints can be sold. If pints reach 0, they will stop decrimenting and remain empty.
+This react app is built based on the following diagram. Users are able to add new keg records and details which are displayed in a list. List items can be selected which display the keg details where they can be deleted, or pints can be sold. If pints reach 0, they will stop decrementing and remain empty.
 
 ![picture](images/Tap-Room-Planning.png)
 
@@ -77,7 +77,7 @@ This react app is built based on the following diagram. Users are able to add ne
 
 
 * When pints are sold on a keg, it moves to the bottom of the keg list
-* when User chooses Edit keg, the form comes up but when you select update keg, it says throws an error.
+* when user edits a keg it accepts the change only after user selects back to keg list and resets the pints left to 124
 ### 🛠 Built With
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [React](https://reactjs.org/docs/getting-started.html)
