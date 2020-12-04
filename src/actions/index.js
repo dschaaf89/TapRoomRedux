@@ -1,37 +1,35 @@
+import * as c from './../actions/ActionTypes';
 export const deleteKeg = id => ({
-  type: 'DELETE_keg',
+  type: c.DELETE_KEG,
   id
 });
-
-export const addKeg = (keg) => {
-  const { name, brand, price, alcoholContent, id } = keg;
-  return {
-    type: 'ADD_KEG',
-    name: name,
-    brand: brand,
-    price: price,
-    alcoholContent:alcoholContent,
-    id: id
-  }
-}
-
 export const toggleForm = () => ({
-  type: 'TOGGLE_FORM'
+  type: c.TOGGLE_FORM
 });
 
+
+export const addKeg = (keg) => {
+  const { name, brand, price,alcoholContent,pintsLeft, id } = keg;
+  return {
+    type: c.ADD_KEG,
+    name: name,
+      brand: brand,
+      price: price,
+      alcoholContent:alcoholContent,
+      pintsLeft:pintsLeft,
+      id: id
+  }
+}
 export const editKeg = (keg) => {
   
   return {
-    type: 'EDIT_KEG',
-    masterList: keg.masterList,
+    type: c.EDIT_KEG,
+    masterList: keg.masterKegList,
     editing: false,
-    selectedKeg: keg.kegToEdit,
+    selectedKeg: keg.selectedKeg,
     formVisibleOnPage: keg.formVisibleOnPage,
-    
-
   }
 } 
-
 export const selectKeg = (keg) => {
   
   return {
@@ -46,4 +44,3 @@ export const startEditingKeg = (keg) => {
     editing: keg
   }
 }
-
