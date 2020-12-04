@@ -1,64 +1,74 @@
-import kegListReducer from '../../reducers/keg-list-reducers';
+import kegListReducer from '../../reducers/keg-list-reducer';
 
 describe('kegListReducer', () => {
+
   let action;
   const kegData = {
-  name: 'Pale Ale',
-  brand: 'Sam Adams',
-  price: '4.99',
-  alcoholContent:'6.5',
-  id:1
+    name: "dead guy ale",
+    brand: "rogue Brewing",
+    price: "6.00",
+    alcoholContent: "6.7%",
+    pintsLeft: "123",
+    id: 1,
   };
 
-  const currentState = {
-    1: {
-      name: 'Pale Ale',
-      brand: 'Sam Adams',
-      price: '4.99',
-      alcoholContent:'6.5',
-      id:1},
-    2: { name: 'October Fest',
-      brand: 'Sam Adams',
-      price: '2.99',
-      alcoholContent:'6.5',
-      id:2}
-  }
+  // const currentState = {
+  //   1: {name: "dead guy ale",
+  //   brand: "rogue Brewing",
+  //   price: "6.00",
+  //   alcoholContent: "6.7%",
+  //   pintsLeft: "123",
+  //   id: 1},
+  //   2: {name: "pilsner",
+  //   brand: "crux",
+  //   price: "5.00",
+  //   alcoholContent: "5.2%",
+  //   pintsLeft: "124",
+  //   id: 2}
+  // }
+  
+
   test('Should return default state if there is no action type passed into the reducer', () => {
     expect(kegListReducer({}, { type: null })).toEqual({});
   });
-  test('Should successfully add new keg data to masterKegList', () => {
-    const { name, brand, price,alcoholContent, id } = kegData;
+
+  test('should successfully add new keg data to masterKegList', () => {
+    const { name, brand, price, alcoholContent, pintsLeft, id } = kegData;
     action = {
       type: 'ADD_KEG',
       name: name,
       brand: brand,
       price: price,
       alcoholContent: alcoholContent,
+      pintsLeft: pintsLeft,
       id: id
     };
-
     expect(kegListReducer({}, action)).toEqual({
       [id] : {
         name: name,
         brand: brand,
         price: price,
         alcoholContent: alcoholContent,
+        pintsLeft: pintsLeft,
         id: id
       }
-    });
+    })
   });
-  test('should successfully delete an Keg', () => {
-    action = {
-      type: 'DELETE_KEG',
-      id: 1
-    };
-    expect(kegListReducer(currentState,action)).toEqual({
-      2:{name:'October Fest',
-      brand:'Sam Adams',
-      price:'2.99',
-      alcoholContent:'6.5',
-      id:2
-    }
-  });
-});
+
+
+  // test('should successfully delete a keg', () => {
+  //   action = {
+  //     type: 'DELETE_KEG',
+  //     id: 1
+  //   };
+  //   expect(kegListReducer(currentState, action)).toEqual({
+  //     2: {name: "pilsner",
+  //     brand: "crux",
+  //     price: "5.00",
+  //     alcoholContent: "5.2%",
+  //     pintsLeft: "124",
+  //     id: 2}
+  //   });
+  // });
+
 });
