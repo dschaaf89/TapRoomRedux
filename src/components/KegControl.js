@@ -10,14 +10,15 @@ import Button from "react-bootstrap/button";
 
 
 class KegControl extends React.Component {
-  // constructor(props){
-  //   super(props);
-  //   console.log(props);
-  //   this.state = {
-  //     selectedKeg: null,
-  //     editing:false
-  //   };
-  // }
+  constructor(props){
+    super(props);
+    console.log(props);
+    this.state = {
+      formVisibleOnPage: false,
+      selectedKeg: null,
+      editing:false
+    };
+  }
 
   handleClick = () => {  
     if (this.props.selectedKeg != null) {
@@ -51,32 +52,35 @@ class KegControl extends React.Component {
   }
 
   handleChangingSelectedKeg = (id) => { 
-    const selectedKeg = this.props.masterList
-      .filter(keg => keg.id === id)[0];
-
-    const { dispatch } = this.props;
-    const action = a.selectKeg(selectedKeg);
-    dispatch(action);
-    // this.setState({selectedKeg});
+    const selectedKeg = this.props.masterKegList[id]
+    this.setState({selectedKeg: selectedKeg});
   }
 
-  handleAddingNewKegToList = (newKeg) => 
-    {
-      const { dispatch } = this.props;
-      const action = a.addKeg(newKeg);
-      dispatch(action);
-      const action2 = a.toggleForm();
-      dispatch(action2);
-    }
+  handleAddingNewKegToList = (newKeg) => {
+  const { dispatch } = this.props;
+  const { id, name, brand , price,alcoholContent,pintsLeft} = newKeg;
+  const action = {
+    type: 'ADD_KEG',
+    id: id,
+    name: name,
+    brand: brand,
+    price: price,
+    alcoholContent:alcoholContent,
+    pintsLeft:pintsLeft
 
-    handleDeletingKeg = (id) => { 
-      const newMasterList = this.state.masterList
-        .filter(keg => keg.id !== id);
-      this.setState({
-        masterList: newMasterList,
-        selectedKeg: null
-      });
-    }
+  }
+  dispatch(action);
+  this.setState({formVisibleOnPage: false});
+}
+handleDeletingKeg = (id) => {
+  const { dispatch } = this.props;
+  const action = {
+    type: 'DELETE_KEG',
+    id: id
+  }
+  dispatch(action);
+  this.setState({selectedKeg: null});
+}
   handlePintRemove = (kegToEdit) => {
     
     const editedMasterKegList = this.state.masterKegList
@@ -149,7 +153,7 @@ KegControl.propTypes = {
 };
 const mapStateToProps = state => {
   return {
-    masterTicketList: state.masterTicketList,
+    masterKegList: state.masterKegList,
     formVisibleOnPage: state.formVisibleOnPage,
     selectedKeg: state.selectedKeg,
     editing: state.editing

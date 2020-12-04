@@ -12,6 +12,10 @@ import { composeWithDevTools, devToolsEnhancer } from 'redux-devtools-extension'
 
 const store = createStore(rootReducer, devToolsEnhancer());
 
+store.subscribe(() =>
+  console.log(store.getState())
+);
+
 ReactDOM.render(
   <Provider store = {store}>
   <App />
