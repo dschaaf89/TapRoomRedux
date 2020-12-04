@@ -5,10 +5,10 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createStore } from 'redux';
-import reducer from './reducers/ticket-list-reducer';
+import reducer from './reducers/keg-list-reducers-list-reducer';
 import { Provider } from 'react-redux';
 
-const store - createStore(reducer)
+const store = createStore(reducer)
 ReactDOM.render(
   <Provider store={store}>
     <App />
