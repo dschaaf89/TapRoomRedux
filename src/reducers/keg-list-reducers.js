@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default (state = {}, action) => {
   const { name, brand, price, alcoholContent, id } = action;
   switch (action.type) {
@@ -11,7 +12,11 @@ export default (state = {}, action) => {
           id: id
         }
       });
-    default:
-      return state;
-  }
-};
+      case 'DELETE_KEG':
+        const newState = { ...state };
+        delete newState[id];
+        return newState;
+      default:
+        return state;
+      }
+    };

@@ -4,6 +4,7 @@ import EditKegForm from './EditKegForm';
 import KegList from './KegList';
 import KegDetail from './KegDetail';
 import Button from "react-bootstrap/button";
+import { connect } from 'react-redux';
 
 class KegControl extends React.Component {
   constructor(props){
@@ -108,5 +109,5 @@ class KegControl extends React.Component {
     )
   }
 }
-
+KegControl = connect()(KegControl);
 export default KegControl;
