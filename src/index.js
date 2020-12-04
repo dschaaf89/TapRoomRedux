@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -7,12 +8,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createStore } from 'redux';
 import rootReducer from './reducers/index';
 import { Provider } from 'react-redux';
+import { composeWithDevTools, devToolsEnhancer } from 'redux-devtools-extension';
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, devToolsEnhancer());
+
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Provider store = {store}>
+  <App />
+</Provider>,
   document.getElementById('root')
 );
 
