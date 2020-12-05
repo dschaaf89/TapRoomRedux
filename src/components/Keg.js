@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Keg(props){
-  let pintsLeft = props.pintsLeft;
-  if(parseInt(pintsLeft) === 0){
-    pintsLeft= "Out of Stock";
+  let quantity = props.pintsLeft;
+  if(parseInt(quantity) === 0){
+    quantity= "Out of Stock";
   }
   const topStyle = {
     textAlign: 'center',

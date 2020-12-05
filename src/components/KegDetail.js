@@ -4,28 +4,12 @@ import PropTypes from "prop-types";
 import Button from "react-bootstrap/button";
 
 function KegDetail(props){
-
-  const topStyle = {
-    textAlign: 'center',
-    fontFamily: 'tahoma',
-    color: 'white'
-  }
-
-  const cardPadding = {
-    
-    marginBottom: "30px",
-    marginLeft: "15px",
-    marginTop: "15px",
-    marginRight: "15px",
-    backgroundColor: 'rgba(52, 52, 52, .6)',
-    color: "white",    
-  }
-  
   const { keg, onClickingDelete } = props;
-  let pintsLeft = keg.pintsLeft;
-  if(parseInt(pintsLeft) === 0) {
-    pintsLeft = 'Out Of Stock';
+  let quantity = keg.pintsLeft;
+  if(parseInt(quantity) === 0) {
+    quantity = 'Out Of Stock';
   }
+
 
 
   function handlePintRemove(){
@@ -36,8 +20,9 @@ function KegDetail(props){
 
   return(
     <React.Fragment>
-      <div className = "card"style={cardPadding}>
-        <div className = "container" style = {topStyle}>
+      <div id = "Details">
+        <div className ="card">
+          <div className ="container">
       <h1>Keg Details</h1>
       <h3>Name:{keg.name} </h3>
       <h3>Brand:{keg.brand}</h3>
@@ -48,6 +33,7 @@ function KegDetail(props){
       <Button variant="success" onClick={handlePintRemove}>Sell Pint</Button>
       <Button variant="warning" onClick={props.onClickingEdit}>Edit Item</Button>
       <hr/>
+      </div>
       </div>
       </div>
     </React.Fragment>
