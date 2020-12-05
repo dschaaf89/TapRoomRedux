@@ -1,6 +1,6 @@
   
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
-
+import * as c from '../../actions/ActionTypes';
 describe('selectedKegReducer', () => {
 
   let action;
@@ -8,7 +8,7 @@ describe('selectedKegReducer', () => {
 
   
   const itemData = {
-    Name: 'Sam Adams',
+    name: 'Sam Adams',
     
     quantity: 1,
    
@@ -21,9 +21,9 @@ describe('selectedKegReducer', () => {
   test('should successfully select keg ', () => {
   
   action = {
-    type: 'SELECT_KEG',
+    type: c.SELECT_KEG,
     selectedKeg: {
-            Name: 'Sam Adams',
+            name: 'Sam Adams',
       
       quantity: 1,
     }

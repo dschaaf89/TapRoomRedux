@@ -9,22 +9,19 @@ export const toggleForm = () => ({
 
 
 export const addKeg = (keg) => {
-  const { name, brand, price,alcoholContent,pintsLeft, id } = keg;
-  return {
-    type: c.ADD_KEG,
-    name: name,
-      brand: brand,
-      price: price,
-      alcoholContent:alcoholContent,
-      pintsLeft:pintsLeft,
-      id: id
-  }
-}
-export const editKeg = (keg) => {
   
   return {
+    type: c.ADD_KEG,
+    masterList: keg.masterList,
+    editing: false,
+    selectedKeg: keg.selectedKeg,
+    formVisibleOnPage: keg.formVisibleOnPage,
+  }
+} 
+export const editKeg = (keg) => {
+  return {
     type: c.EDIT_KEG,
-    masterList: keg.masterKegList,
+    masterList: keg.masterList,
     editing: false,
     selectedKeg: keg.selectedKeg,
     formVisibleOnPage: keg.formVisibleOnPage,
@@ -33,22 +30,29 @@ export const editKeg = (keg) => {
 export const selectKeg = (keg) => {
   
   return {
-    type: 'SELECT_KEG',
+    type: c.SELECT_KEG,
     selectedKeg: keg
+  }
+} 
+export const unSelect = (keg) => {
+  
+  return {
+    type: c.UN_SELECT,
+    selectedKeg: keg.selectedKeg,
+    formVisibleOnPage: keg.formVisibleOnPage,
   }
 } 
 export const startEditingKeg = (keg) => {
   
   return {
-    type: 'START_EDIT_KEG',
+    type: c.START_EDIT_KEG,
     editing: keg
   }
 }
-export const unSelect = (keg) => {
+export const showForm = (keg) => {
   
   return {
-    type: 'UN_SELECT',
-    selectedKeg: keg.selectedKeg,
-    formVisibleOnPage: keg.formVisibleOnPage,
+    type: c.SHOW_FORM,
+    formVisibleOnPage: keg
   }
-} 
+}

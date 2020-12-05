@@ -1,14 +1,15 @@
-import * as c from './../actions/ActionTypes';
 
 export default (state = null, action) => {
-  const { selectedKeg } = action;
+  console.log(action)
   switch (action.type) {
-  case c.SELECTED_KEG:
-    const newState = selectedKeg;
-    return newState;
-  case c.NO_KEG:
-    const newState2 = null;
-    return newState2;
+  case 'ADD_KEG':
+    return action.selectedKeg;
+  case 'EDIT_KEG':
+    return action.selectedKeg;
+  case 'SELECT_KEG':
+    return action.selectedKeg;
+  case 'UN_SELECT':
+    return action.selectedKeg;
   default:
     return state;
   }
