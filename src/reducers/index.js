@@ -1,15 +1,15 @@
 import { combineReducers } from 'redux';
-import formVisibleOnPageReducer from './form-visible-reducer'
 import kegListReducer from './keg-list-reducer';
-import selectedKegReducer from './selected-keg-reducer';
-import editingReducer from './editing-reducer';
+// import selectedKegReducer from './selected-keg-reducer';
+// import editingReducer from './editing-reducer'
+import formVisibleReducer from './form-visible-reducer';
 
 
 const rootReducer = combineReducers({
   masterKegList: kegListReducer,
-  selectedKeg: selectedKegReducer,
-  formVisibleOnPage: formVisibleOnPageReducer,
-  editing: editingReducer,
+
+  formVisibleOnPage: formVisibleReducer,
+ 
   
 });
 

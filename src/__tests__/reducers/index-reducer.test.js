@@ -11,8 +11,6 @@ describe("rootReducer", () => {
     expect(rootReducer({}, { type: null })).toEqual({
       masterKegList: {},
       formVisibleOnPage: false,
-      selectedKeg:null,
-      editing:false
     });
   });
   test('Check that initial state of ticketListReducer matches root reducer', () => {

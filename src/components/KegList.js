@@ -8,18 +8,17 @@ function KegList(props) {
 
     <React.Fragment>
       <hr/>
-      {Object.values(props.kegList).map((keg) =>
-      <Keg
-      whenKegClicked = { props.onKegSelection }
-      key = {keg.id}
-      id = {keg.id}
-      name={keg.name}
-      brand={keg.brand}
-      price={keg.price}
-      alcoholContent={keg.alcoholContent}
-      pintsLeft={keg.pintsLeft}
-      />
-      )}
+      { Object.values(props.kegList).map((keg) => {
+          return <Keg
+            whenKegClicked = { props.onKegSelection }
+            name={keg.name}
+            brand={keg.brand}
+            price={keg.price}
+            alcoholContent={keg.alcoholContent}
+            pintsLeft={keg.pintsLeft}
+            id={keg.id}
+            key={keg.id}/>
+        })}
     </React.Fragment>
   );
 }
@@ -31,23 +30,3 @@ KegList.propTypes = {
 
 export default KegList;
 
-
-
-{/* {Object.values(props.kegList).map((keg) =>{
-        <Keg
-        whenKegClicked = { props.onKegSelection }
-        key={keg.id}
-        id={keg.id}
-        name={keg.name}
-        brand={keg.brand}
-        pintsLeft={keg.pintsLeft}
-        price={keg.price}
-        alcoholContent={keg.alcoholContent}
-        
-      />
-
-})
-}
-    </React.Fragment>
-  );
-} */}
