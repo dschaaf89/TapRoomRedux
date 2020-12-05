@@ -30,9 +30,11 @@ describe("rootReducer", () => {
     alcoholContent: "6.7%",
     pintsLeft: "123",
     id: 1,
+    selectedKeg:false,
+    editing:false
     }
     store.dispatch(action);
-    expect(store.getState().masterKegList).toEqual(kegListReducer(undefined,action));
+    expect(store.getState().masterKegList).toEqual(kegListReducer(false,action));
   });
   
   test('Check that TOGGLE_FORM action works for formVisibleReducer and root reducer', () => {

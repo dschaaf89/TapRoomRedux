@@ -8,7 +8,7 @@
 <p align="center">
     <!-- Project Avatar/Logo -->
     <br>
-     <a href="https://github.com/dschaaf89/Tap-Room">
+     <a href="https://github.com/dschaaf89/TapRoomRedux">
         <img src="https://cdn2.justwineapp.com/assets/article/2017/05/perfect-pour-pint-beer-lager-tap-free-image-photo.jpg">
     </a>
     </a>
@@ -23,28 +23,29 @@
     </p>
     <!-- Project Shields -->
     <p align="center">
-        <a href="https://github.com/dschaaf89/Tap-Room/graphs/contributors">
-            <img src="https://img.shields.io/github/contributors/dschaaf89/Tap-Room.svg?style=plastic">
+        <a href="https://github.com/dschaaf89/TapRoomRedux/graphs/contributors">
+            <img src="https://img.shields.io/github/contributors/dschaaf89/TapRoomRedux.svg?style=plastic">
         </a>
         ¨
-        <a href="https://github.comdschaaf89/Tap-Room/stargazers">
-            <img src="https://img.shields.io/github/stars/dschaaf89/Tap-Room.svg?color=yellow&style=plastic">
+        <a href="https://github.comdschaaf89/TapRoomRedux/stargazers">
+            <img src="https://img.shields.io/github/stars/dschaaf89/TapRoomRedux.svg?color=yellow&style=plastic">
         </a>
         ¨
-        <a href="https://github.com/dschaaf89/Tap-Room/issues">
+        <a href="https://github.com/dschaaf89/TapRoomRedux/issues">
             <img src="https://img.shields.io/github/issues/dschaaf89/Tap-Room?style=plastic">
         </a>
     </p>
 </p>
 <p align="center">
   <small>Initiated 11/20/2020.</small>
+  <small>Edited on 12/4/2020.</small>
 </p>
 
 <!-- Project Links -->
 <p align="center">
-    <a href="https://github.com/dschaaf89/Tap-Room"><big>Project Docs</big></a> ·
-    <a href="https://github.com/dschaaf89/Tap-Room/issues"><big>Report Bug</big></a> ·
-    <a href="https://github.com/dschaaf89/Tap-Room/issues"><big>Request Feature</big></a>
+    <a href="https://github.com/dschaaf89/TapRoomRedux"><big>Project Docs</big></a> ·
+    <a href="https://github.com/dschaaf89/TapRoomRedux/issues"><big>Report Bug</big></a> ·
+    <a href="https://github.com/dschaaf89/TapRoomRedux/issues"><big>Request Feature</big></a>
 </p>
 ------------------------------
 
@@ -68,22 +69,25 @@
 
 ### 📖 Description
 
-This react app is built based on the following diagram. Users are able to add new keg records and details which are displayed in a list. List items can be selected which display the keg details where they can be deleted, or pints can be sold. If pints reach 0, they will stop decrementing and remain empty.
+This react app was updated with REDUX is built based on the following diagram. Users are able to add new keg records and details which are displayed in a list. List items can be selected which display the keg details where they can be deleted, or pints can be sold. If pints reach 0, they will stop decrementing and remain empty.
 
 ![picture](images/Tap-Room-Planning.png)
 
 
 ### 🦠 Known Bugs
 
-
+* As of submission there was a cannot convert Undefined or null Object error
 * When pints are sold on a keg, it moves to the bottom of the keg list
 * when user edits a keg it accepts the change only after user selects back to keg list and resets the pints left to 124
+
+
 ### 🛠 Built With
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [React](https://reactjs.org/docs/getting-started.html)
 * HTML
 * CSS
 * Bootstrap
+* REDUX
 
 
 <!-- ### 🔍 Preview -->
