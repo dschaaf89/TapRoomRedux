@@ -4,6 +4,12 @@ import PropTypes from "prop-types";
 import Button from "react-bootstrap/button";
 
 function KegDetail(props){
+
+  const topStyle = {
+    textAlign: 'center',
+    fontFamily: 'tahoma',
+    color: 'white'
+  }
   const { keg, onClickingDelete } = props;
   let quantity = keg.pintsLeft;
   if(parseInt(quantity) === 0) {

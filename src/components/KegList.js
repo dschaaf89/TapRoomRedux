@@ -22,6 +22,8 @@ function KegList(props) {
 
     <React.Fragment>
       <hr/>
+      <div className="box">
+        <div className="inner-box">
       { Object.values(props.kegList).map((keg) => {
       
           return <Keg
@@ -35,8 +37,8 @@ function KegList(props) {
             key={keg.id}/>
            
         })}
-       
-      
+       </div>
+      </div>
     </React.Fragment>
   );
 }

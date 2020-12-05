@@ -27,3 +27,14 @@ code {
   background:rgb(39, 29, 53);
   margin-top:8px;
 }
+
+.box {
+  height: 300px;
+  width: 100%;
+  text-align: left;
+  overflow-y: scroll;
+  margin-top: 2% 0 2% 5%;
+}
+.inner-box {
+  margin: 2% 5% 2% 5%;
+}
