@@ -76,8 +76,6 @@ This react app was updated with REDUX is built based on the following diagram. U
 
 ### 🦠 Known Bugs
 
-* As of submission there was a cannot convert Undefined or null Object error
-* When pints are sold on a keg, it moves to the bottom of the keg list
 * when user edits a keg it accepts the change only after user selects back to keg list and resets the pints left to 124
 
 
