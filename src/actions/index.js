@@ -44,3 +44,11 @@ export const startEditingKeg = (keg) => {
     editing: keg
   }
 }
+export const unSelect = (keg) => {
+  
+  return {
+    type: 'UN_SELECT',
+    selectedKeg: keg.selectedKeg,
+    formVisibleOnPage: keg.formVisibleOnPage,
+  }
+} 
