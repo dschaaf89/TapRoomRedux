@@ -10,12 +10,9 @@ import * as a from './../actions';
 
 
 class KegControl extends React.Component {
-  constructor(props){
-    super(props);
-    console.log(props);
-  }
-
-    handleClick = () => {   if (this.props.selectedKeg != null) {
+ 
+    handleClick = () => { 
+        if (this.props.selectedKeg != null) {
       console.log('here')
       const { dispatch } = this.props;
       const action = a.unSelect({
@@ -69,7 +66,6 @@ handleDeletingKeg = (id) => {
     const { dispatch } = this.props;
       const action = a.startEditingKeg(true);
       dispatch(action);
-    //this.setState({editing: true});
   }
 
   handleEditingKegInList = (kegToEdit) => {
@@ -111,6 +107,7 @@ handleDeletingKeg = (id) => {
   
   return (
     <React.Fragment>
+      console.log("props " props );
       {this.props.masterKegList[0]===undefined &&
         currentlyVisibleState.props.Kegs !==undefined? "there are no kegs" :''}
       {currentlyVisibleState}
