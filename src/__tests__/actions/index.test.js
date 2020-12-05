@@ -1,4 +1,5 @@
   
+import { QUANTITY_CHANGE } from '../../actions/ActionTypes';
 import * as actions from './../../actions';
 
 describe('TapRoomRedux actions', () => {
@@ -43,6 +44,7 @@ describe('TapRoomRedux actions', () => {
     pintsLeft: "123",
     id: 1,
     })).toEqual({
+    type:'QUANTITY_CHANGE',
     name: "dead guy ale",
     brand: "rogue Brewing",
     price: "6.00",

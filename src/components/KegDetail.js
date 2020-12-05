@@ -10,6 +10,14 @@ function KegDetail(props){
     fontFamily: 'tahoma',
     color: 'white'
   }
+  const cardPadding = {
+    marginBottom: "30px",
+    marginLeft: "15px",
+    marginTop: "15px",
+    marginRight: "15px",
+    backgroundColor: 'rgba(52, 52, 52, .6)',
+    color: "white",    
+  }
   const { keg, onClickingDelete } = props;
   let quantity = keg.pintsLeft;
   if(parseInt(quantity) === 0) {
@@ -27,8 +35,8 @@ function KegDetail(props){
   return(
     <React.Fragment>
       <div id = "Details">
-        <div className ="card">
-          <div className ="container">
+        <div className ="card" style ={cardPadding}>
+          <div className ="container"style ={topStyle}>
       <h1>Keg Details</h1>
       <h3>Name:{keg.name} </h3>
       <h3>Brand:{keg.brand}</h3>

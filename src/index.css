@@ -19,7 +19,7 @@ code {
 }
 #footer {
   text-align: center;
-  position: sticky;
+  position: fixed;
   bottom:0px;
   left:0px;
   width:100%;
@@ -34,7 +34,13 @@ code {
   text-align: left;
   overflow-y: scroll;
   margin-top: 2% 0 2% 5%;
+  background-color: rgba(52 , 52, 52, .4)
 }
 .inner-box {
   margin: 2% 5% 2% 5%;
+
+}
+
+.Details{
+  background-color: rgba(52 , 52, 52, .4)
 }
